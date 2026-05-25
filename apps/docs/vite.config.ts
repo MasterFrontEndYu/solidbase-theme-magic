@@ -5,9 +5,11 @@ import { solidStart } from "@solidjs/start/config";
 import mdx from "@mdx-js/rollup";
 
 import { createSolidBase } from "@kobalte/solidbase/config";
+import defaultTheme from "@kobalte/solidbase/default-theme";
 
 const solidBase = createSolidBase({
     componentsPath: import.meta.resolve("./packages/magic"),
+    extends: defaultTheme,
 });
 
 export default defineConfig({
